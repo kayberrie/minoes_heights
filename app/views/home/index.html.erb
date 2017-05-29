@@ -1,0 +1,19 @@
+<h1>
+    Welcome to Minoe's Heights Service Desk.
+</h1>
+<p>
+  <%= link_to 'Sign up', users_path %>
+</p>
+<p>
+Sign in below
+</p>
+<div class="container">
+  <%= form_for User.new do |f| %>
+      <%= f.label :surname, 'Surname' %>:
+      <%= f.text_field :surname %><br />
+      <%= f.label :room_number, 'Room Number' %>:
+      <%= f.text_field :room_number %><br />
+      <%= f.submit 'Login'%>
+  <% end %>
+
+</div>
