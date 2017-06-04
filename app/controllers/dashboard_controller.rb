@@ -1,8 +1,8 @@
 class DashboardController < ApplicationController
 
 	def index
- if @current_user.present?
-	 render 'index'
+ if (session[:user_id]).present?
+	 render 'dashboard/index'
  else
 	 redirect_to root_path
  end
