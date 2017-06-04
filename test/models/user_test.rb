@@ -8,6 +8,7 @@
 #  room_number :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  password    :text
 #
 
 require 'test_helper'
