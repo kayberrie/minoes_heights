@@ -1,0 +1,3 @@
+class ServiceItem < ApplicationRecord
+
+end
