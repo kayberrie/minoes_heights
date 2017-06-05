@@ -1,15 +1,10 @@
-<h1>
-  Welcome to Minoe's Heights Service Desk.
-</h1>
-<div>
-  Log in below
-</div>
-<div class="row">
+<h1>Log in below</h1>
+<div class="form-group">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %>
 
-        <%= f.label :room_number %>
-        <%= f.text_field :room_number, class: 'form-control' %>
+        <%= f.label :email %>
+        <%= f.text_field :email, class: 'form-control' %>
 
         <%= f.label :password %>
         <%= f.password_field :password, class: 'form-control' %>
@@ -17,8 +12,7 @@
         <%= f.submit 'Log in', class: "btn btn-primary" %>
     <% end %>
 
-    <p> New user? <%= link_to 'Sign up now!', signup_path %></p>
+    <p id="sign_up"> New user? <%= link_to 'Sign up now!', signup_path %></p>
 
   </div>
 </div>
-

@@ -14,3 +14,14 @@
  *= require_self
 
 */
+body {
+    background-color: #B3B3B3;
+}
+
+.form-group{
+    width:450px;
+    height:40px;
+}
+#sign_up{
+    float:left;
+}
