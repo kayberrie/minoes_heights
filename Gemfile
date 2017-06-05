@@ -54,6 +54,7 @@ group :development do
   gem 'toastr-rails'
   gem 'remotipart', github: 'mshibuya/remotipart'
   gem 'rails_admin', '>= 1.0.0.rc'
+  gem 'cancancan'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

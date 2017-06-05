@@ -11,6 +11,6 @@
 #  updated_at  :datetime         not null
 #
 
-class ServiceItem<ApplicationRecord
+class ServiceItem < ApplicationRecord
 
 end
