@@ -3,10 +3,10 @@
 </nav>
 
 
-<% if current_user.service_provider_role?%>
-<%=render 'dashboard/user_dashboard'%>
+<% if current_user.service_provider_role? %>
+  <%=render 'dashboard/provider_dashboard'%>
 <%else%>
-<%= render 'dashboard/provider_dashboard'%>
+  <%= render 'dashboard/user_dashboard'%>
 <% end %>
 
 

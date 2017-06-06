@@ -1,5 +1,6 @@
 <h1>Stuffs</h1>
 <br>
+
 <table class="table table-inverse">
   <tr>
     <th scope="row">Name</th>
@@ -8,7 +9,7 @@
     <th scope="row">Duration</th>
   </tr>
   <% @services.each do |service| %>
-      <tr colspan='4'> Hair services by: <%= service.user.name %> </tr>
+      <tr colspan='4'> <h1><%= service.name.capitalize %> services by: <%= service.user.name %> </h1></tr>
       <% service.service_items.each do |service_item| %>
           <tr>
             <td><%= service_item.name %></td>
