@@ -1,23 +1,2 @@
 
-<h1>Stuffs</h1>
-<br>
-<table class="table table-inverse">
-  <tr>
-    <th scope="row">Name</th>
-    <th scope="row">Price</th>
-    <th scope="row">Description</th>
-    <th scope="row">Duration</th>
-  </tr>
-  <% @services.each do |service| %>
-      <tr colspan='4'> Hair services by: <%= service.user.name %> </tr>
-      <br>
-      <% service.service_items.each do |service_item| %>
-          <tr>
-            <td><%= service_item.name %></td>
-            <td><%= service_item.price %></td>
-            <td><%= service_item.description %></td>
-            <td><%= service_item.duration %></td>
-          </tr>
-      <% end %>
-  <% end %>
-</table>
+<%= render 'shared/service_items' %>

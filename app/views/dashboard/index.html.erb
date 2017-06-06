@@ -1,11 +1,16 @@
 <nav class="navbar navbar-inverse">
-  <%= link_to 'Logout', logout_path, method: :delete, class: "navbar-text" %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "navbar-text" %>
 </nav>
 
 
+<% if current_user.service_provider_role?%>
+<%=render 'dashboard/user_dashboard'%>
+<%else%>
+<%= render 'dashboard/provider_dashboard'%>
+<% end %>
 
 
 
-<br><br> <br>
+
 
 

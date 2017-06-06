@@ -1,15 +1,10 @@
 class DashboardController < ApplicationController
 
   def index
-    if (session[:user_id]).present?
-      render 'dashboard/index'
-    else
-      redirect_to root_path
-    end
+    @services = current_user.service_provider_role? ? current_user.services : []
   end
 
-  def show
-
-  end
 
 end
+
+
