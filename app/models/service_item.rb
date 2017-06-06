@@ -9,6 +9,7 @@
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  service_id  :integer
 #
 
 class ServiceItem < ApplicationRecord

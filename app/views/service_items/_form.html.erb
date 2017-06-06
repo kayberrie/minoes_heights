@@ -1,6 +1,7 @@
 <h1>Add a service item</h1>
 
 <%= form_for(@service_item) do |f| %>
+    <%= select 'service', 'service_category', %w[ Hair Electronics Cell_group Events Goods Tutoring Prayer ] %>
     <%= f.hidden_field :service_category, value: @service_category %>
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>

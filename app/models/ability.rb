@@ -29,4 +29,15 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
   end
+   def superadmin_role
+     can manage,all
+   end
+   def service_provider_role
+     can :create ,current_user.service_item
+
+   end
+   def user_role
+     can :read, services
+
+   end
 end

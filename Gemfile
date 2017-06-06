@@ -55,6 +55,8 @@ group :development do
   gem 'remotipart', github: 'mshibuya/remotipart'
   gem 'rails_admin', '>= 1.0.0.rc'
   gem 'cancancan'
+  gem 'notifications'
+  gem 'exception_notification'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
