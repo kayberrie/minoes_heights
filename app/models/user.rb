@@ -29,6 +29,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
+  has_many :services
 
   def self.authenticate(email, password)
     username = User.find_by(email: email).try(:authenticate, password)
