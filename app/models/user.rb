@@ -14,6 +14,9 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :string
 #  last_sign_in_ip        :string
+#  superadmin_role        :boolean          default("f")
+#  service_provider_role  :boolean          default("f")
+#  user_role              :boolean          default("t")
 #
 
 class User < ApplicationRecord
@@ -32,5 +35,6 @@ class User < ApplicationRecord
     return nil unless username.present?
     username
   end
+
 
 end
