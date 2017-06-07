@@ -2,6 +2,9 @@ class ServiceItemsController < ApplicationController
   def new
     @service_item = ServiceItem.new
   end
+  def edit
+    #@service_item = Service_item.find(params[:service_id])
+  end
 
   def index
     category = params[:service_category].to_i
@@ -16,7 +19,6 @@ class ServiceItemsController < ApplicationController
       service = Service.create(name: name, service_category: category, user: current_user)
       service.save!
     end
-
     service_item = ServiceItem.create(service_items_params)
     service_item.service_id = service.id
 
@@ -24,6 +26,13 @@ class ServiceItemsController < ApplicationController
       redirect_to dashboard_path, notice: 'service item successfully added.'
     else
       render 'new'
+    end
+
+    def update
+      if @service_item.update(service_items_params)
+      else
+        render 'edit'
+      end
     end
 
   end

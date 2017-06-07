@@ -14,6 +14,6 @@
 class Service < ApplicationRecord
 has_many :service_items
 belongs_to :user
-  enum service_category: [:hair, :electronics, :cell_group, :events, :goods, :tutoring,:prayer]
+  enum service_category: [:hair, :prayer, :electronics, :goods, :tutoring, :notices, :events ]
 
 end

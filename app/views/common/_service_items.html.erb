@@ -14,13 +14,16 @@
     <th scope="row">Duration</th>
   </tr>
   <% @services.each do |service| %>
-      <tr colspan='4'> <h1><%= service.name.capitalize %> service providers </h1></tr>
+      <tr colspan='4'></tr>
       <% service.service_items.each do |service_item| %>
           <tr>
             <td><%= service_item.name %></td>
             <td><%= service_item.price %></td>
             <td><%= service_item.description %></td>
             <td><%= service_item.duration %></td>
+            <% if current_user.service_provider_role? %>
+                <td><%= link_to 'Edit', edit_service_item_path(service_item)%>
+            <% end %>
           </tr>
       <% end %>
   <% end %>

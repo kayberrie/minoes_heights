@@ -57,6 +57,7 @@ group :development do
   gem 'cancancan'
   gem 'notifications'
   gem 'exception_notification'
+  gem 'ratyrate'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
