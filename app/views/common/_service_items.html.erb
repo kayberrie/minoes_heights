@@ -1,9 +1,10 @@
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
   <%= link_to 'Edit profile', edit_user_registration_path , class: "navbar-text" %>
   <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "navbar-text" %>
-
+  <p class ="pull-right" class="navbar-text"> <%= current_user.name %> &nbsp; <span class="glyphicon glyphicon-user" aria-hidden="true" > </span></p>
 </nav>
+
 <h1>Stuffs</h1>
 
 <table class="table table-striped table-inverse">
