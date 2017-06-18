@@ -1,11 +1,17 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings= Bookings.all
+    @booking= Bookings.all
   end
 
   def create
-    @bookings= Booking.new(booking_params)
+    @booking= Booking.new(booking_params)
+    if @booking.save
+      redirect_to @booking, notice: 'Booking was successfully created.'
+      render :show, status: :created, location: @booking
+    else
+      render :new
+    end
   end
 
   def update
@@ -13,7 +19,7 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @bookings=Bookings.new
+    @booking=Bookings.new
   end
 
   def booking_params
